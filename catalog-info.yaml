@@ -1,0 +1,11 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "benefits-ufpls-ui-tests-pw"
+  description: "Benefits UFPLS UI Tests"
+  annotations:
+    backstage.io/techdocs-ref: url:https://undefined/undefined/undefined
+spec:
+  type: library
+  lifecycle: production
+  owner: "group:default/operational"

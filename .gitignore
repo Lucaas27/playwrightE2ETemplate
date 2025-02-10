@@ -1,0 +1,12 @@
+node_modules/
+test-results/
+playwright-report/
+.idea/
+.DS_Store
+.env
+.tmp
+tsrc
+allure-results
+allure-report
+src/tests/auth/adminAuth.json
+src/tests/auth/teamLeaderAuth.json
