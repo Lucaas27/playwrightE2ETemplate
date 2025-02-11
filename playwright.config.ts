@@ -38,12 +38,7 @@ const config: PlaywrightTestConfig = {
 
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: process.env.CI
-    ? [
-        ['html', { open: 'never' }],
-        ['allure-playwright'],
-        ['junit', { outputFile: 'playwright-report/results.xml' }],
-        ['json', { outputFile: 'playwright-report/results.json' }],
-      ]
+    ? [['html', { open: 'never' }], ['allure-playwright'], ['json', { outputFile: 'playwright-report/results.json' }]]
     : [['list', { printSteps: true }], ['allure-playwright'], ['html', { open: 'never' }]],
 
   /* Set maximum number of slow test files to report and duration in milliseconds that is considered slow */
@@ -80,6 +75,7 @@ const config: PlaywrightTestConfig = {
       testMatch: 'e2e/**/*.spec.ts',
       use: {
         ...devices['Desktop Chrome'],
+        storageState: 'src/tests/auth/auth.json',
       },
       dependencies: ['auth'],
     },

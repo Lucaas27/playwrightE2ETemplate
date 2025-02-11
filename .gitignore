@@ -10,3 +10,4 @@ allure-results
 allure-report
 src/tests/auth/adminAuth.json
 src/tests/auth/teamLeaderAuth.json
+src/tests/auth/auth.json

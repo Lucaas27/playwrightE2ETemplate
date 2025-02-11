@@ -1,4 +1,4 @@
-import { BaseElement } from '@/pages/elements/base.element';
+import { BaseElement } from '@/support/elements/base.element';
 import test, { expect, Page } from '@playwright/test';
 
 export class Select extends BaseElement {

@@ -30,7 +30,7 @@ This project is a UI testing framework web applications. It uses Playwright for 
 ## :white_check_mark: Requirements
 
 - nodejs >= v20.18.0 (switch with nvm)
-- IntelliJ / VSCode / Any half decent IDE
+- VSCode / Any half decent IDE
 
 ## :checkered_flag: Starting
 
@@ -99,7 +99,7 @@ This project is a UI testing framework web applications. It uses Playwright for 
 
 ### Key Directories and Files
 
-- [`src/pages`](/src/pages/): Contains the page objects, components, and elements.
+- [`src/pages`](/src/support/pages/): Contains the page objects, components, and elements.
 - [`src/tests`](/src/tests/): Contains the test specifications and setup files.
 - [`playwright-report`](/playwright-report/): Contains Playwright trace files.
 - [`test-results`](/test-results/): Stores trace files for failures.
@@ -110,9 +110,9 @@ The framework follows the Page Object Model (POM) design pattern, which helps in
 
 #### Pages
 
-Pages represent the different pages of the application. Each page class extends the [`BasePage`](/src/pages/base.page.ts) class and contains components and elements that are present on that page.
+Pages represent the different pages of the application. Each page class extends the [`BasePage`](/src/support/pages/base.page.ts) class and contains components and elements that are present on that page.
 
-Example: [`UFPLSMainPage`](/src/pages/ufplsMain.page.ts)
+Example: [`UFPLSMainPage`](/src/support/pages/ufplsMain.page.ts)
 
 ```javascript
   export class MainPage extends BasePage {
@@ -132,9 +132,9 @@ Example: [`UFPLSMainPage`](/src/pages/ufplsMain.page.ts)
 
 #### Components
 
-Components represent reusable parts of the UI that can be found on the page. Each component class extends the [`BaseComponent`](/src/pages/components/base.component.ts) class and contains elements that are part of that component.
+Components represent reusable parts of the UI that can be found on the page. Each component class extends the [`BaseComponent`](/src/support/pages/components/base.component.ts) class and contains elements that are part of that component.
 
-Example: [`SearchBox`](/src/pages/components/UFPLS/searchBox.component.ts)
+Example: [`SearchBox`](/src/support/pages/components/UFPLS/searchBox.component.ts)
 
 ```javascript
 export class SearchBox extends BaseComponent {
@@ -162,9 +162,9 @@ export class SearchBox extends BaseComponent {
 
 #### Elements
 
-Elements represent individual UI elements on the page, such as buttons, inputs, and links. Each element class extends the [`BaseElement`](/src/pages/elements/base.element.ts) class and provides methods to interact with the element.
+Elements represent individual UI elements on the page, such as buttons, inputs, and links. Each element class extends the [`BaseElement`](/src/support/pages/elements/base.element.ts) class and provides methods to interact with the element.
 
-Example: [`Button`](/src/pages/elements/button.element.ts)
+Example: [`Button`](/src/support/pages/elements/button.element.ts)
 
 ```javascript
 import { BaseElement } from '@/pages/elements/base.element';

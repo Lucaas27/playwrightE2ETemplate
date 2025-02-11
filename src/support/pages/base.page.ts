@@ -1,6 +1,6 @@
 import { IBasePage, IElementsVisibility } from '@/interfaces';
-import { BaseComponent } from '@/pages/components/base.component';
-import { BaseElement } from '@/pages/elements/base.element';
+import { BaseComponent } from '@/support/components/base.component';
+import { BaseElement } from '@/support/elements/base.element';
 import test, { Page } from '@playwright/test';
 
 export abstract class BasePage implements IBasePage, IElementsVisibility {
