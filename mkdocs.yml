@@ -1,8 +1,0 @@
-site_name: "benefits-ufpls-ui-tests-pw"
-site_description: "Benefits UFPLS UI Tests"
-
-nav:
-  - Introduction: index.md
-
-plugins:
-  - techdocs-core
